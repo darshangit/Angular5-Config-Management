@@ -1,0 +1,33 @@
+<h1>Product Information</h1>
+
+<div *ngIf="product; else elseProduct">
+    <table>
+        <tbody>
+            <tr>
+                <td>Product Name</td>
+                <td><input [(ngModel)]="product.productName" /></td>
+            </tr>
+            <tr>
+                <td>Introduction Date</td>
+                <td><input [(ngModel)]="product.introductionDate"></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input [(ngModel)]="product.price"></td>
+
+            </tr>
+            <tr>
+                <td>URL:</td>
+                <td><input [(ngModel)]="product.url"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button (click)="saveProduct()">Save</button>
+        <button>Cancel</button>
+    </div>
+</div>
+
+<ng-template #elseProduct>
+    <h4>Oops Nothing Here</h4>
+</ng-template>
