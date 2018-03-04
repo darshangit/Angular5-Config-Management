@@ -1,30 +1,32 @@
-<h1>Product Information</h1>
-
 <div *ngIf="product; else elseProduct">
-    <table>
-        <tbody>
-            <tr>
-                <td>Product Name</td>
-                <td><input [(ngModel)]="product.productName" /></td>
-            </tr>
-            <tr>
-                <td>Introduction Date</td>
-                <td><input [(ngModel)]="product.introductionDate"></td>
-            </tr>
-            <tr>
-                <td>Price:</td>
-                <td><input [(ngModel)]="product.price"></td>
+    <div class="card card-inverse card-primary">
+        <div class="card-header">
+                <h3>Product Information</h3>
+        </div>
 
-            </tr>
-            <tr>
-                <td>URL:</td>
-                <td><input [(ngModel)]="product.url"></td>
-            </tr>
-        </tbody>
-    </table>
-    <div>
-        <button (click)="saveProduct()">Save</button>
-        <button>Cancel</button>
+        <div class="card-block">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input id="productName" class="form-control" [(ngModel)]="product.productName">
+            </div>
+            <div class="form-group">
+                <label for="introductionDate">Date</label>
+                <input id="introductionDate" class="form-control" [(ngModel)]="product.introductionDate">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input id="price" class="form-control" [(ngModel)]="product.price">
+            </div>
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input id="url" class="form-control" [(ngModel)]="product.url">
+            </div>
+        </div>
+
+        <div class="card-footer">
+            <button class="btn btn-primary" (click)="saveProduct()">Save</button>
+            <button class="btn btn-default" type="reset">Cancel</button>
+        </div>
     </div>
 </div>
 

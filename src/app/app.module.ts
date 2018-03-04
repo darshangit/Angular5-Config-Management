@@ -5,10 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductDetailComponent } from './product/product-detail.component';
 import { AppSettingsService } from './shared/appsettings.service';
+import { SettingsComponent } from './settings/settings.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [AppComponent, ProductDetailComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, ProductDetailComponent, SettingsComponent],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [AppSettingsService],
   bootstrap: [AppComponent]
 })
