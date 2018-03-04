@@ -17,5 +17,11 @@ export class SettingsComponent implements OnInit {
         .subscribe(settings => this.settings = settings);
     }
 
-    saveSettings(): void {}
+    saveSettings(): void {
+        this.appSettingsService.saveSettings(this.settings);
+    }
+
+    deleteSettings(): void {
+        this.appSettingsService.deleteSettings();
+    }
 }
